@@ -3,7 +3,6 @@ const cards = document.querySelector('.cards')
 const populate = async(e) => {
     const data = await fetch('./data.json');
     const response = await data.json();
-    console.log(response)
     cards.innerHTML = response.map(card =>{
         return `
         <div class="card-wrapper">
